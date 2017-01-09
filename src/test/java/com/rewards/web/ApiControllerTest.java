@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rewards.model.Transfer;
 import com.rewards.model.User;
 import com.rewards.repository.UserRepository;
+import com.rewards.service.TransferService;
 import com.rewards.service.UserService;
 import com.rewards.web.request.CreateTransferRequest;
 import com.rewards.web.request.CreateUserRequest;
@@ -40,6 +41,8 @@ public class ApiControllerTest {
     private UserRepository userRepository;
     @MockBean
     private UserService userService;
+    @MockBean
+    private TransferService transferService;
 
     @Test
     public void createUserSucceeds() throws Exception {
